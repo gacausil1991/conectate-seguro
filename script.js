@@ -1,0 +1,14 @@
+document.querySelector("#quiz").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const data = new FormData(this);
+  let puntos = 0;
+  for (let i = 1; i <= 4; i++) puntos += Number(data.get("q" + i));
+  const mensaje =
+    puntos === 4
+      ? "¡Excelente! Conoces buenas prácticas de ciberseguridad."
+      : puntos >= 2
+        ? "¡Buen trabajo! Repasa los consejos para seguir mejorando."
+        : "Sigue aprendiendo: revisa los riesgos y las recomendaciones.";
+  document.querySelector("#resultado").textContent =
+    `Resultado: ${puntos} de 4. ${mensaje}`;
+});
