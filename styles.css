@@ -1,0 +1,372 @@
+:root {
+  --navy: #0b3d91;
+  --blue: #1976d2;
+  --green: #4caf50;
+  --ink: #12264b;
+  --pale: #f2f6ff;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font:
+    16px/1.6 system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffffee;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e6edf8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px max(5%, calc((100% - 1180px) / 2));
+}
+.brand {
+  font-weight: 850;
+  font-size: 1.15rem;
+  color: var(--navy);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.brand .img {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+
+nav {
+  display: flex;
+  gap: 19px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #26446e;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 0.9rem;
+}
+nav a:hover {
+  color: var(--blue);
+}
+.hero {
+  min-height: 580px;
+  background: linear-gradient(130deg, #f2f6ff, #fff 65%, #edfaed);
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: start;
+  gap: 50px;
+  padding: 50px max(6%, calc((100% - 1120px) / 2));
+}
+.hero img {
+  width: 120%;
+  border-radius: 22px;
+  mix-blend-mode: multiply;
+}
+
+
+.eyebrow {
+  color: #248c3a;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.13;
+  color: var(--navy);
+  margin: 17px 0;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--blue);
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 570px;
+}
+.cta {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  padding: 13px 24px;
+  font: 700 1rem system-ui;
+  cursor: pointer;
+  margin-top: 16px;
+}
+.cta:hover {
+  background: var(--blue);
+}
+.section {
+  padding: 85px max(6%, calc((100% - 1120px) / 2));
+  scroll-margin-top: 80px;
+}
+.soft {
+  background: var(--pale);
+}
+.sectionhead {
+  max-width: 760px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+.sectionhead h2 {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.2;
+  color: var(--navy);
+  margin: 12px 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.cards article {
+  padding: 24px 16px;
+  background: white;
+  border: 1px solid #dce9f8;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px #0b3d910c;
+}
+.cards article span {
+  font-size: 2rem;
+}
+.cards h3 {
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+.cards p {
+  font-size: 0.92rem;
+}
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.tips div {
+  background: white;
+  border-left: 5px solid var(--green);
+  border-radius: 13px;
+  padding: 22px;
+  box-shadow: 0 3px 14px #0b3d9110;
+}
+.visual-title {
+  text-align: center;
+  margin: 45px 0 15px;
+}
+.infografia {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid #dce9f8;
+}
+#quiz {
+  max-width: 780px;
+  margin: auto;
+}
+fieldset {
+  border: 1px solid #d7e3f4;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 18px 23px;
+}
+legend {
+  font-weight: 800;
+  color: var(--navy);
+  padding: 0 8px;
+}
+label {
+  display: block;
+  padding: 7px 0;
+  cursor: pointer;
+}
+input {
+  accent-color: var(--blue);
+  margin-right: 8px;
+}
+#resultado {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+.video-placeholder {
+  border: 2px dashed #9cb6db;
+  border-radius: 22px;
+  padding: 55px 25px;
+  text-align: center;
+  max-width: 820px;
+  margin: auto;
+  font-size: 1.1rem;
+  background: #fff;
+}
+.video-placeholder:first-line {
+  font-size: 2.3rem;
+}
+footer {
+  background: #092b65;
+  color: white;
+  text-align: center;
+  padding: 40px 18px;
+  
+}
+footer p {
+  margin: 8px 0;
+  color: #e1ebfa;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; 
+}
+
+footer div p {
+  margin: 0 0 8px 0;
+  font-weight: 850;
+  font-size: 1.15rem;
+  color: #e1ebfa;
+  text-decoration: none;
+}
+
+footer div .img {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tips {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  header {
+    padding: 13px 5%;
+    display: block;
+  }
+  nav {
+    gap: 10px;
+    margin-top: 9px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 6%;
+    gap: 22px;
+  }
+  .hero img {
+    max-width: 340px;
+    margin: auto;
+  }
+  .section {
+    padding: 65px 6%;
+  }
+  .cards,
+  .tips {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.riesgo-icono {
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+
+.cards article .riesgo-icono {
+    transition: transform 0.3s ease;
+}
+
+.cards article:hover .riesgo-icono {
+    transform: scale(1.15);
+}
+
+
+.tips .tip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+
+.tip-icono {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+
+.tips .tip-iconos-grupo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+
+    width: 100%;
+    height: 65px;
+}
+
+
+.tips .tip-iconos-grupo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.tip-iconos-grupo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+
+.tips .tip strong {
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.tips .tip:hover .tip-icono,
+.tips .tip:hover .tip-iconos-grupo img {
+    transform: scale(1.12);
+}
+
